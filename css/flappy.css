@@ -1,0 +1,91 @@
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            html,
+            body {
+                height: 100%;
+            }
+            
+            @font-face {
+                font-family: 'Pixel';
+                src: url('../fonts/Pixel.ttf');
+            }
+            
+            #title {
+                margin-top: 15px;
+                color: white;
+            }
+            
+            [wm-flappy] {
+                margin: 35px;
+                position: relative;
+                border: 5px solid dodgerblue;
+                height: 97%;
+                width: 90%;
+                background-color: deepskyblue;
+                overflow: hidden;
+            }
+            
+            .passaro {
+                position: absolute;
+                width: 60px;
+                left: calc(50% - 30px);
+            }
+            
+            .par-de-barreiras {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .barreira {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .barreira .borda {
+                height: 30px;
+                width: 130px;
+                background: linear-gradient(90deg, #639301, #a5e82e);
+                border: 2px solid #000;
+                border-radius: 5px;
+            }
+            
+            .barreira .corpo {
+                height: 130px;
+                width: 90px;
+                background: linear-gradient(90deg, #639301, #a5e82e);
+                border-left: 2px solid #000;
+                border-right: 2px solid #000;
+            }
+            
+            .progresso {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-family: Pixel;
+                font-size: 70px;
+                z-index: 100;
+            }
+            
+            @media (max-width: 600px) {
+                [wm-flappy] {
+                    margin: 0;
+                    height: 100%;
+                    width: 100%;
+                    padding: 0;
+                }
+                .passaro {
+                    position: absolute;
+                    width: 60px;
+                    left: 45%;
+                }
+            }
